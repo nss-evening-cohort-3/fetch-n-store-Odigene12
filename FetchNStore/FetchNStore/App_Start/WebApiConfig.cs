@@ -16,7 +16,8 @@ namespace FetchNStore
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+               routeTemplate: "api/{controller}/{id}",
+               //There is no default controller or default action. The reason ID are optional, is because API endpoints have multiple actions
                 defaults: new { id = RouteParameter.Optional }
             );
         }
